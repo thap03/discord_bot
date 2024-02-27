@@ -44,6 +44,6 @@ client.on("messageCreate", (message) => {
 
 // logs into the bot to make it go online
 client.login(
-    "MTIxMTQ1NzI0ODUzMTA1NDY5Mg.GwZ8FB.8ZnHPd-e3j9xhsIh8XNAs0GLFmLksY5bBG_jfY"
+    "TOKEN HERE"
 );
 
