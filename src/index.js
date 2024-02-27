@@ -1,3 +1,6 @@
+// acquire the token from a different file
+require("dotenv").config();
+
 // destructuring - importing a set amount of things from a package
 const { Client, IntentsBitField } = require("discord.js");
 
@@ -18,8 +21,12 @@ client.on("ready", (c) => {
 })
 
 // have the bot reply back to you when you send certain keywords
-client.on("messageCreate", (message) => {
+/*client.on("messageCreate", (message) => {
     const content = message.content.toLowerCase();
+
+    if (message.author.bot) {
+        return;
+    }
 
     if (content.includes("toby")) {
         message.reply("My father.");
@@ -30,7 +37,7 @@ client.on("messageCreate", (message) => {
     }
 
     if (content.includes("ethan")) {
-        message.reply("FUCKEN WEIRDO.");
+        message.reply("YURRRRR");
     }
 
     if (content.includes("matt")) {
@@ -41,9 +48,8 @@ client.on("messageCreate", (message) => {
         message.reply("MANDOOOOOOOOOO");
     }
 })
+*/
 
 // logs into the bot to make it go online
-client.login(
-    "TOKEN HERE"
-);
+client.login(process.env.TOKEN);
 
